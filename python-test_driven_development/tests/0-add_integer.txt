@@ -1,0 +1,54 @@
+The "0-add_integer" module
+
+>>>add_integer = __import__('0-add_integer').add_integer
+>>>add_integer(1)
+99
+>>>add_integer(4, 5)
+9
+>>>add_integer("a", 6)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>>add_integer(None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>>add_integer(-1, "b")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
+>>>add_integer(100.4, 5)
+105
+
+>>>add_integer(10+5j)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>>add_integer((10, 5), 6)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+>>>add_integer()
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes exactly 2 arguments and given: 0
+
+>>>add_integer(1, 2, 3)
+Traceback (most recent call last):
+...
+TypeError: add_integer() takes exactly 2 arguments but 3 were given
+
+>>>add_integer(float('nan'))
+Traceback (most recent call last):
+...
+ValueError: Cannot convert float NaN to integer
+
+>>>add_integer(float('inf'))
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
