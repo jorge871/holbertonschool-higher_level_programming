@@ -1,3 +1,3 @@
 -- create a table in database
 
-CREATE TABLE;
+CREATE TABLE first_table(id INT, name VARCHAR(256));
